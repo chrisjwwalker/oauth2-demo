@@ -1,0 +1,25 @@
+{
+  "name": "oauth2-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev-auth": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/auth-server/app.ts",
+    "dev-client": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/client-server-app/app.ts",
+    "dev-resource": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/resource-server/app.ts",
+    "start-auth": "node dist/auth-server/app.js",
+    "start-client": "node dist/client-server-app/app.js",
+    "start-resource": "node dist/resource-server/app.js"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.6",
+    "@types/node": "^14.0.14",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
